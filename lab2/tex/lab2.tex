@@ -1,0 +1,63 @@
+% @Author: Hector Vargas
+% @Date:   2016-05-17 17:24:46
+% @Last Modified by:   Hector Vargas
+% @Last Modified time: 2016-05-17 18:14:19
+\documentclass{article}
+\usepackage{xlop,longtable,pgf,xparse,amsmath,amssymb}
+\usepackage[margin=0.5in]{geometry}
+\begin{document}
+    % table for our data
+    \begin{center}
+        \begin{longtable}[c]{| c c |}
+            \caption{Data Collected with $\lambda_{select} = 692.1 nm$ \label{long}}\\
+            \hline
+            Concentration ($\frac{mol}{L}$) & ABS\\
+            \hline
+            0.1  & .625\\
+            0.07 & .483\\
+            0.05 & .294\\
+            0.03 & .165\\
+            0.01 & .026\\
+            \hline
+        \end{longtable}
+    \end{center}
+    % table for our data
+    \begin{center}
+        \begin{longtable}[c]{| c c |}
+            \caption{Data Collected with $\lambda_{select} = 818.5 nm$ \label{long}}\\
+            \hline
+            Concentration ($\frac{mol}{L}$) & ABS\\
+            \hline
+            0.075 & .94\\
+            0.05  & .601\\
+            0.025 & .364\\
+            0.01  & .052\\
+            \hline
+        \end{longtable}
+    \end{center}
+
+    % table for galv series
+    \begin{center}
+        \begin{longtable}[c]{| c c c c |}
+            \caption{Observations from Galvanic series reactions \label{long}}\\
+            \hline
+            Element & $Fe^{2+}$ & $Cu^{2+}$ & $Ni^{2+}$\\
+            \hline
+            Zn & $\varnothing$ & $\varnothing$ & $\varnothing$ \\
+            Cu & $\varnothing$ & $\varnothing$ & $\varnothing$\\
+            Mg & x & x & $\varnothing$\\
+            Sn & $\varnothing$ & $\varnothing$ & $\varnothing$\\
+            Fe & $\varnothing$ & x & $\varnothing$\\
+            Ca & x & x & x\\
+            Ni & $\varnothing$ & $\varnothing$ & $\varnothing$\\
+            \hline
+        \end{longtable}
+    \end{center}
+
+    % regression analysis
+    $$ y = -0.03713x + 6.84098$$
+    \begin{center}
+        Correlation Coefficient($r^{2}$) = $.9949121$
+    \end{center}
+
+\end{document}
