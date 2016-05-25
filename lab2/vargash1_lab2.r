@@ -25,5 +25,5 @@ cor_det <- cor_cof^2
 #Print out the data
 cat( "x", lin_model$coefficients[1], "\n",
      "y", lin_model$coefficients[2], "\n",
-     "Correlation Determination", cor_det, "\n" )
-     "Correlation Coefficient  ", cor_cof, "\n"
+     "Correlation Determination", cor_det, "\n",
+     "Correlation Coefficient  ", cor_cof, "\n")
