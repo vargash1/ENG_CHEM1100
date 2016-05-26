@@ -14,9 +14,10 @@ summary(lin_model)
 
 # Plot the graph, as well as the linear regression model.
 plot(MOLPERL,ABS,
-    xlab = "ABS",
-    ylab = "mol/L")
-abline(-0.03713,6.84098)
+    xlab = "mol/L",
+    ylab = "ABS",
+    main = "Lab 2 Linear Regression Analysis")
+abline(lin_model)
 
 #Calculate the correlation coefficients
 cor_cof <- cor(MOLPERL,ABS)
