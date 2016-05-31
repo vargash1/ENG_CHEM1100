@@ -32,9 +32,10 @@ get_data <- function(element_data, element_zero, element_color){
     for(i in 1:length(element_data$Theta)){
         t_value <- element_data$Theta[i]
         n_value <- element_data$n[i]
-        energy_level <- photon_enrgy(lab_lambda(t_value, n_value, element_zero))
+        lambda_value <- lab_lambda(t_value, n_value, element_zero)
+        energy_level <- photon_enrgy(lambda_value)
         cat(element_color, " Value for Theta:\t",t_value,
-            "\tEnergy Level(n): ",n_value, "\tE: ", energy_level, "\n")
+            "\tEnergy Level(n): ",n_value, "\tE: ", energy_level, "\tLambda: ", lambda_value,"\n")
     }
 }
 get_data(neon_data, neon_zero, "Neon")
