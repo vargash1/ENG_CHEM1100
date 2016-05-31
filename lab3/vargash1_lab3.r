@@ -6,6 +6,10 @@
 # Read in data, attach it for ease of use
 neon_data <- read.csv("neon.csv")
 hydrogen_data <- read.csv("hydrogen.csv")
+redLED_data <- read.csv("redled.csv")
+neon_zero <- 17.90
+hydrogen_zero <- 17.75
+redLED_zero <- 5.00
 
 # Utility functions  For calculations
 rad2deg <- function(rad) {(rad * 180) / (pi)}
@@ -19,31 +23,20 @@ lab_lambda <- function(l_theta, l_n, element_zero){
 # E = h *(c/lambda)
 # h = Planks constant
 # c = speed of light
-nrg_lambda <- function(l_lambda){
+photon_enrgy <- function(l_lambda){
     (6.626 * (10^-34)) * ((3 * 10^8)/(l_lambda))
 }
 
-get_neon_data <- function(){
-    neon_zero <- 17.90
-    for(i in 1:8){
-        t_value <- neon_data$Theta[i]
-        n_value <- neon_data$n[i]
-        temp <- nrg_lambda(lab_lambda(t_value, n_value, neon_zero))
-        cat("Neon Value for Theta:\t",t_value,
-            "\tEnergy Level(n): ",n_value, "\tE: ", temp, "\n")
+get_data <- function(element_data, element_zero, element_color){
+    cat(element_color, "Calculations\n---\n")
+    for(i in 1:length(element_data$Theta)){
+        t_value <- element_data$Theta[i]
+        n_value <- element_data$n[i]
+        energy_level <- photon_enrgy(lab_lambda(t_value, n_value, element_zero))
+        cat(element_color, " Value for Theta:\t",t_value,
+            "\tEnergy Level(n): ",n_value, "\tE: ", energy_level, "\n")
     }
 }
-get_hydrogen_data <-function(){
-    hydrogen_zero <- 17.75
-    for(i in 1:8){
-        t_value <- hydrogen_data$Theta[i]
-        n_value <- hydrogen_data$n[i]
-        temp <- nrg_lambda(lab_lambda(t_value, n_value, hydrogen_zero))
-        cat("Hydrogen Value for Theta:\t",t_value,
-            "\tEnergy Level(n): ",n_value, "\tE: ", temp, "\n")
-    }
-}
-cat("Neon Calculations\n---\n")
-get_neon_data()
-cat("Hydrogen Calculations\n---\n")
-get_hydrogen_data()
+get_data(neon_data, neon_zero, "Neon")
+get_data(hydrogen_data, hydrogen_zero, "Hydrogen")
+get_data(redLED_data, redLED_zero, "Red LED Bulb")
