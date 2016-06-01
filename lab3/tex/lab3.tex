@@ -15,7 +15,7 @@
     $$E = h * \dfrac{c}{\lambda}$$\\
     % Table for lux values
     \begin{longtable}[c]{| c c || c c c c c c c c c c c c c|}
-        \caption{Class Lux Readings($\si{\micro\mol\per\metre\tothe{2}\second}$ and Leaf Buoyancy Rates) \label{long}}\\
+        \caption{Class Lux Readings($\si[per-mode=symbol]{\micro\mol\per\metre\tothe{2}\second}$) and Leaf Buoyancy Rates \label{long}}\\
         \hline
         Color Led & Lux($\si\lux$) & 2  & 4 & 6 & 8 & 10 & 12 & 14 & 16 & 18 & 20 & 22 & 24 & 26\\
         \hline
@@ -28,39 +28,96 @@
     \end{longtable}
 
     % Table for Neon data
-    \begin{longtable}[c]{|c c c || c c c|}
-        \caption{Neon Data Collected with zero $ = 17.90$ \label{long}}\\
+    \begin{longtable}[c]{|c c c c c || c c c c c|}
+        \caption{Neon Data Collected with $\theta_{0} = 17.90$ \label{long}}\\
         \hline
-        $\theta$ & Series & Energy Level  & $\theta$ & Series & Energy Level\\
+        $\theta$ & Series & Energy Level($\si{\joule}$) & Wavelength($\lambda$) & Color & $\theta$ & Series & Energy Level($\si{\joule}$) & Wavelength($\lambda$) & Color\\
         \hline
-        27.10 & 1 & $3.76757 * 10^{-19}$ & 36.50 & 2 & $3.777056 * 10^{-19}$\\
-        28.00 & 1 & $3.43488 * 10^{-19}$ & 38.50 & 2 & $3.424061 * 10^{-19}$\\
-        28.40 & 1 & $3.30541 * 10^{-19}$ & 39.25 & 2 & $3.309107 * 10^{-19}$\\
-        28.90 & 1 & $3.15689 * 10^{-19}$ & 40.00 & 2 & $3.202152 * 10^{-19}$\\
+        27.1 & 1 & $3.767 * 10^{-19}$ & $5.276 * 10^{-7} \si{\metre}$ & Green & 36.5 & 2 & $3.777 * 10^{-19}$ & $5.262 * 10^{-7} \si{\metre}$ & Green\\
+        28.0 & 1 & $3.434 * 10^{-19}$ & $5.787 * 10^{-7} \si{\metre}$ & Yellow & 38.5 & 2 & $3.424 * 10^{-19}$ & $5.805 * 10^{-7} \si{\metre}$  & Yellow\\
+        28.4 & 1 & $3.305 * 10^{-19}$ & $6.013 * 10^{-7} \si{\metre}$ & Orange & 39.3 & 2 & $3.309 * 10^{-19}$ & $6.007 * 10^{-7} \si{\metre}$ & Orange\\
+        28.9 & 1 & $3.156 * 10^{-19}$ & $6.296 * 10^{-7} \si{\metre}$ & Red & 40.0 & 2 & $3.202 * 10^{-19}$ & $6.207 * 10^{-7} \si{\metre}$ & Red\\
         \hline
     \end{longtable}
     % Table for H data
-    \begin{longtable}[c]{|c c c|| c c c|}
-        \caption{Hydrogen Data Collected with zero $ = 17.75$ \label{long}}\\
+    \begin{longtable}[c]{|c c c c c|| c c c c c|}
+        \caption{Hydrogen Data Collected with $\theta_{0} = 17.75$ \label{long}}\\
         \hline
-        $\theta$ & Series & Energy Level  & $\theta$ & Series & Energy Level\\
+        $\theta$ & Series & Energy Level($\si{\joule}$) & Wavelength($\lambda$) & Color & $\theta$ & Series & Energy Level($\si{\joule}$) & Wavelength($\lambda$) & Color\\
         \hline
-        25.50 & 1 & $4.46688 * 10^{-19}$ & 32.80 & 2 & $4.6396 * 10^{-19}$\\
-        26.25 & 1 & $4.07572 * 10^{-19}$ & 34.75 & 2 & $4.120533 * 10^{-19}$\\
-        27.75 & 1 & $3.46887 * 10^{-19}$ & 38.20 & 2 & $3.448089 * 10^{-19}$\\
-        29.90 & 1 & $2.86196 * 10^{-19}$ & 41.00 & 2 & $3.051922 * 10^{-19}$\\
+        25.5 & 1 & $4.466 * 10^{-19}$ & $4.450 * 10^{-7} \si{\metre}$ & Purple & 32.8 & 2 & $4.639 * 10^{-19}$ & $4.284 * 10^{-7} \si{\metre}$ & Purple\\
+        26.3 & 1 & $4.075 * 10^{-19}$ & $4.877 * 10^{-7} \si{\metre}$ & Red & 34.8 & 2 & $4.120 * 10^{-19}$ & $4.824 * 10^{-7} \si{\metre}$ & Red\\
+        27.8 & 1 & $3.468 * 10^{-19}$ & $5.730 * 10^{-7} \si{\metre}$ & Yellow & 38.2 & 2 & $3.448 * 10^{-19}$ & $5.764 * 10^{-7} \si{\metre}$ & Yellow\\
+        29.9 & 1 & $2.861 * 10^{-19}$ & $6.945 * 10^{-7} \si{\metre}$ & Red & 41.0 & 2 & $3.051 * 10^{-19}$ & $6.513 * 10^{-7} \si{\metre}$ & red\\
         \hline
     \end{longtable}
     % Table for RED LED bulb data
-    \begin{longtable}[c]{| c c c || c c c|}
-        \caption{Red LED Bulb Data Collected with zero $ = 5.00$ \label{long}}\\
+    \begin{longtable}[c]{| c c c c c || c c c c c |}
+        \caption{Red LED Bulb Data Collected with $\theta_{0} = 5.00$ \label{long}}\\
         \hline
-        $\theta$ & Series & Energy Level  & $\theta$ & Series & Energy Level\\
+        $\theta$ & Series & Energy Level($\si{\joule}$) & Wavelength($\lambda$) & Color & $\theta$ & Series & Energy Level($\si{\joule}$) & Wavelength($\lambda$) & Color\\
         \hline
-        5.50 & 1 & $6.90266 * 10^{-18}$ & 16.10 & 2 & $6.257609 * 10^{-19}$\\
-        5.75 & 1 & $4.60185 * 10^{-18}$ & 16.50 & 2 & $6.042733 * 10^{-19}$\\
-        6.25 & 1 & $2.76125 * 10^{-18}$ & 17.00 & 2 & $5.794418 * 10^{-19}$\\
+        10.5 & 1 & $6.284 * 10^{-19}$ & $3.162 * 10^{-7} \si{\metre}$ & Red & 16.1 & 2 & $6.257 * 10^{-19}$ & $3.176 * 10^{-7} \si{\metre}$ & Red\\
+        10.8 & 1 & $6.012 * 10^{-19}$ & $3.306 * 10^{-7} \si{\metre}$ & Red & 16.5 & 2 & $6.042 * 10^{-19}$ & $3.289 * 10^{-7} \si{\metre}$ & Red\\
+        11.3 & 1 & $5.533 * 10^{-19}$ & $3.592 * 10^{-7} \si{\metre}$ & Red & 17.0 & 2 & $5.794 * 10^{-19}$ & $3.430 * 10^{-7} \si{\metre}$ & Red\\
         \hline
     \end{longtable}
+
+    % First Question
+    Rydberg equation we will use:\\\\\\\\\\\
+    $$\dfrac{1}{\lambda} = R(\dfrac{1}{2^{2}} - \dfrac{1}{3^{2}})$$
+    $$\downarrow$$
+    $$6.5633 * 10^{-7} m \approx 656 \si{\nano\metre}$$
+
+    % Useful constants that we used for this lab\\
+    % $$c = 3.0 * 10^{8} \si[per-mode=symbol]{\metre\per\second}$$\\
+    % $$h = 6.626 * 10^{-34} \si{\joule} \cdot s$$\\
+    % $$a = 3.3 * 10^{-6} \si{\metre}$$\\
+    % Formulas\\
+    % $$\lambda = \dfrac{a \sin(\theta)}{n}$$\\
+    % $$E = h * \dfrac{c}{\lambda}$$\\
+
+    % Second Question
+    $$ \lambda = 3.3 * 10^{-6} \si{\metre}  \dfrac{29.90 - 17.75}{1}$$
+    $$ \downarrow$$
+    $$ \lambda = 6.945568 * 10^{-7} \si{\metre} \approx 694 \si{\nano\metre}$$
+
+    %Third Question
+    \begin{center}
+        Neon
+        $$(\lambda) 527 \si{\nano\metre} \approx \dfrac{3.3 * 10^{-6} \si{\metre} * \sin(27.1- 17.75)}{1} $$
+        $$\downarrow$$
+        $$ (E) 3.767 * 10^{-19} = 6.626 * 10^{-34}\si{\joule} \cdot \si{\second} \dfrac{3 * 10^8 \si[per-mode=symbol]{\metre\per\second}}{527 \si{\nano\metre}} $$
+        Hydrogen
+        $$(\lambda) 445 \si{\nano\metre} \approx \dfrac{3.3 * 10^{-6} \si{\metre} * \sin(25.5 - 17.75)}{1}$$
+        $$\downarrow$$
+        $$ (E) 4.466 * 10^{-19} = 6.626 * 10^{-34}\si{\joule} \cdot \si{\second} *  \dfrac{3 * 10^8 \si[per-mode=symbol]{\metre\per\second}}{445 \si{\nano\metre}} $$
+
+
+        Neon
+        $$(\lambda) 526 \si{\nano\metre} \approx \dfrac{3.3 * 10^{-6} \si{\metre} * \sin(36.5 - 17.75)}{2} $$
+        $$\downarrow$$
+        $$ (E) 3.777 * 10^{-19} = 6.626 * 10^{-34}\si{\joule} \cdot \si{\second} \dfrac{3 * 10^8 \si[per-mode=symbol]{\metre\per\second}}{526 \si{\nano\metre}} $$
+        Hydrogen
+        $$(\lambda) 428 \si{\nano\metre} \approx \dfrac{3.3 * 10^{-6} \si{\metre} * \sin(32.8 - 17.75)}{2}$$
+        $$\downarrow$$
+        $$ (E) 4.639 * 10^{-19} = 6.626 * 10^{-34}\si{\joule} \cdot \si{\second} *  \dfrac{3 * 10^8 \si[per-mode=symbol]{\metre\per\second}}{445 \si{\nano\metre}} $$
+
+    \end{center}
+
+    %Fourth Question
+    \begin{center}
+        We will need to use the equation for heat energy gained or lost by a substance.\\
+        C is the specific heat of water.
+        $$q(\si{\joule}) = m C \Delta $$
+        $$m = 1 \si{\gram}$$
+        $$C = 4.18 \si[per-mode=symbol]{\joule\per\gram\kelvin}$$
+        $$\Delta = 1$$
+        $$\downarrow$$
+        $$4.18 \si{\joule} = 1 \si{\gram} * 4.18\si[per-mode=symbol]{\joule\per\gram\kelvin} * 1  $$
+        $$\downarrow$$
+        $$9.360 * 10^{18} = {4.18 \si{\joule}} * \dfrac{1 \gamma}{4.466 * 10^{-19}}$$
+
+    \end{center}
 
 \end{document}
