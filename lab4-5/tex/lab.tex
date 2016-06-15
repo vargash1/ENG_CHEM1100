@@ -5,14 +5,57 @@
 \documentclass{article}
 \usepackage{graphicx,xlop,longtable,pgf,xparse,amsmath,amssymb, siunitx}
 \graphicspath{ {./} }
-\usepackage[margin=0.5in]{geometry}
+\newcommand\Tstrut{\rule{0pt}{3.6ex}}         % = `top' strut
+\newcommand\Bstrut{\rule[-0.9ex]{0pt}{0pt}} \usepackage[margin=0.5in]{geometry}
 \begin{document}
     \begin{center}
         Lab 4-5 Biodiseal\\
         \line(1,0){525}
     \end{center}$\\$
+    % Calculations
     $$x \si{\gram} \text{ KOH} * \dfrac{1 \si{\liter} \text{ Oil} }{4.6 \si{\gram} \text{ KOH}} $$
     $$\dfrac{8.54 \si{\milli\liter} \text{ Solution}}{1 \si{\milli\liter} \text{ Oil}}   * \dfrac{1000 \si{\milli\liter}}{1 \si{\liter}} * \dfrac{1 \si{\gram}}{1000 \si{\milli\liter}} = 8.54 \si{\gram}$$
-
     $$\dfrac{4.9 \si{\gram} \text{ KOH}}{\si{\liter}}  +  \dfrac{8.54 \si{\gram} \text{ KOH}}{\si{\liter}} = \dfrac{13.44 \si{\gram} \text{ KOH}}{\si{\liter}}$$
+    % table 1
+    \begin{longtable}[c]{| c | c | c | c | c | c | c |}
+        \caption{Test Results Study 1 Classwide \label{long}}\\[.25in]
+        \hline
+        Cloud (V) & Cloud (U) & Emulsion(V) & Emulsion(U) &  $\dfrac{3}{27} \text{ V}$ & $\dfrac{3}{27} \text{ U}$ & Condition \Tstrut\Bstrut \\[.1 in]
+        \hline
+        % Group 1
+        Cloudy($10^{\circ}\mathrm{C}$) & $\varnothing$ & Soapy & $\varnothing$ & Cloudy & $\varnothing$ & Control\Tstrut\Bstrut \\[.1 in]
+        \hline
+        % Group 2
+        Cloudy($7^{\circ}\mathrm{C}$)  & $\varnothing$  & Soapy & $\varnothing$  & Clear & $\varnothing$  & $30\% \text{ Methanol}$\Tstrut\Bstrut \\[.1 in]
+        \hline
+        % Group 3
+        Clear($2.8^{\circ}\mathrm{C}$)  & Cloudy($2.8^{\circ}\mathrm{C}$) & Soapy & Soapy  & Settlement & Settlement & $ \text{Control }+ H_{2}O$\Tstrut\Bstrut \\[.1 in]
+        \hline
+        % Group 4
+        Cloudy($-9^{\circ}\mathrm{C}$)  & Cloudy($-4.5^{\circ}\mathrm{C}$) & Soapy & Soapy & Clear &  Cloudy  &  $50^{\circ}\mathrm{C}$\Tstrut\Bstrut \\[.1 in]
+        \hline
+        % Group 5
+        Cloudy($-8.5^{\circ}\mathrm{C}$)  &  $\varnothing$ & Soapy & Soapy & Clear & Seperation  &  $\frac{1}{2} \text{ KOH}$\Tstrut\Bstrut \\[.1 in]
+        \hline
+        % Group 6   **
+        Cloudy($-4.3^{\circ}\mathrm{C}$) &  Cloudy($-8.4^{\circ}\mathrm{C}$) & Soapy & Soapy & Clear & Clear  &  $9.9 \si{\gram} \text{ KOH}$ \Tstrut\Bstrut \\[.1 in]
+        \hline
+        % Group 7   **
+        Cloudy($3.5^{\circ}\mathrm{C}$)  & $\varnothing$ & Seperation & Seperation & $\varnothing$ & Slight Seperation  &  $5 * \text{KOH}$\Tstrut\Bstrut \\[.1 in]
+        \hline
+        % Group 8   **
+        Cloudy($12^{\circ}\mathrm{C}$)  &  Cloudy($6.2^{\circ}\mathrm{C}$) & Soapy & Soapy & No Seperation & No Seperation  &  $ 40\% \text{ Methanol}$\Tstrut\Bstrut \\[.1 in]
+        \hline
+        % Group 9   **
+        Cloudy($19^{\circ}\mathrm{C}$) & Cloudy($19^{\circ}\mathrm{C}$) & Soapy & Soapy & Seperation & Seperation  &  $10\% \text{ Methanol}$\Tstrut\Bstrut \\[.1 in]
+        \hline
+    \end{longtable}
+    \begin{longtable}[c]{| c |  c |  c |}
+        \caption{Test Results Study 2 \label{long}}\\[.25in]
+        \hline
+        Cloud Point & Emulsion & $\dfrac{3}{27}$ \Tstrut\Bstrut \\[.1 in]
+        \hline
+        Clear($-1 ^{\circ}\mathrm{C}$) & Clear with Settlement & Small Oil Settlement \Tstrut\Bstrut \\[.1 in]
+        \hline
+    \end{longtable}
 \end{document}
