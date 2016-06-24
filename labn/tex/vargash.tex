@@ -35,18 +35,24 @@
     % Volume
     $$ \text{Volume} = \dfrac{\text{Mass}}{\text{Density}} $$
     $$\downarrow $$
-    $$ 24.2381 \si{\gram} * \dfrac{1 \si{\milli\liter}}{\si{\gram}} = 24.2381 \si{\milli\liter}$$
+    $$\dfrac{24.2381 \si{\gram}}{\dfrac{1 \si{\gram}}{1 \si{\milli\liter}}} =  24.2381 \si{\gram} * \dfrac{1 \si{\milli\liter}}{\si{\gram}} = 24.2381 \si{\milli\liter}$$
 
     % Ideal gas law
     $$(1 \text{ atm})(0.0242381 \si{
     \liter}) = n(\dfrac{0.08206 \si{\liter} \text{        atm}}{\si{\mole} \text{ } \si{\kelvin}})(294 \si{\kelvin}) $$
     $$\downarrow$$
-    $$n = 7.915596 * 10^{-4} \si{\mole} = .0007915596 \si{\mole}$$
+    $$n = .00100466 \si{\mole}$$
 
     % Van Der Walls equation
-    $$ PV = nRT$$
+    $$\text{Van der Waals Constants for Ethanol}$$
+    $$ a = 12.18 \dfrac{\si{\liter}^{2}\si{\bar}}{\si{\mole}^{2}} = 12.020725 \dfrac{\si{\liter}^{2}\text{ atm}}{\si{\mole}^{2}} \qquad b = 0.08407 \dfrac{\si{\liter}}{\si{\mole}}$$
     $$ (p + \dfrac{n^{2}a}{V^{2}})(V - nb) = nRT$$
-
+    $$ \downarrow $$
+    $$ (1 \text{atm } + \dfrac{n^{2} * 12.18 \dfrac{\si{\liter}^{2}\si{\bar}}{\si{\mole}^{2}}}{.02
+    4238^{2} \si{\liter}})(.02
+    4238 \si{\liter} - n *  0.08407 \dfrac{\si{\liter}}{\si{\mole}}) = n * \dfrac{0.08206 \si{\liter} \text{atm}}{\si{\mole} \text{ } \si{\kelvin}} * 294 \si{\kelvin}$$
+    $$\downarrow $$
+    $$n = 0.00102233 \si{\mole} $$
 
 
 
