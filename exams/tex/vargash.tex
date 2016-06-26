@@ -2,8 +2,7 @@
 % @Date:   Saturday, June 25th 2016, 12:52:10 am
 % @Email:  vargash1@wit.edu
 % @Last modified by:   vargash1
-% @Last modified time: Saturday, June 25th 2016, 6:17:00 pm
-
+% @Last modified time: Sunday, June 26th 2016, 12:45:19 am
 \documentclass{article}
 % Package that renders tables nicely
 \usepackage{longtable}
@@ -12,15 +11,15 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{siunitx}
-\usepackage[margin=0.5in]{geometry}
+\usepackage[version=3]{mhchem}
+\usepackage[margin=1.5in]{geometry}
+\pagenumbering{gobble}
 \begin{document}
-
     %----------------------------------------------
     % Cover Page
     % A fancy cover page with centered text
     \thispagestyle{empty}
     \begin{center}
-        $\line(1,0){525}$\\
         Exam Writeup \LaTeX\\
         Professor G.Sirokman\\
         Hector Vargas\\
@@ -38,40 +37,83 @@
 
     %----------------------------------------------
     % Question 1 Exam 1
-    %
-    $$\text{Exam 1 Part 1}$$
-    1. There are two naturally occurring types of chlorine, ${}^{35}Cl (34.969)$ and ${}^{37}Cl (36.966)$\\
-    a) Given that the atomic weight of chlorine is $63.546$, what are the abundances of ${}^{35}Cl$ and ${}^{37}Cl$?\\
-    $$ $$
-    b) What makes ${}^{35}Cl$ different from ${}^{37}Cl$\\
-    Both of thse isotopes of chlorine differe by the number of neutrons they both have. It's important to note that the number of protons must remian the same. A different number of protons results in a different element. The difference in neutrons is what contributes to the difference in weight.\\
-    c)Which chlorine is regular chlorine and which one is the isotope?\\
+    \begin{center}
+        \textbf{Exam 1 Part 1}\\
+        \textit{Atomic Structure}
+    \end{center}
+    \textbf{1. There are two naturally occurring types of chlorine, ${}^{35}$ Cl $(34.969 \si{\atomicmassunit})$ and ${}^{37}$ Cl $(36.966 \si{\atomicmassunit})$}
+
+    a) Given that the atomic weight of chlorine is $63.546 \si{\atomicmassunit}$, what are the abundances of ${}^{35}$Cl and ${}^{37}$Cl?
+
+    b) What makes ${}^{35}$Cl different from ${}^{37}$Cl?
+
+    Both of these isotopes of chlorine differ by the number of neutrons they both have. It's important to note that the number of protons must remain the same. A different number of protons results in a different element. The difference in neutrons is what contributes to the difference in weight.
+
+    c)Which chlorine is regular chlorine and which one is the isotope?
+
+    The term regular would be a bit incorrect. They are both regular chlorine, what makes them 'regular' is the fact that one of their isotopes is in higher abundance.
 
     \pagebreak
     %----------------------------------------------
 
     %----------------------------------------------
     % Question 2 Exam 1
-    %
-    $$\text{Exam 1 Part 1}$$
-    Question 2
+    \begin{center}
+        \textbf{Exam 1 Part 1}\\
+        \textit{Unit Analysis}
+    \end{center}
+    \textbf{2. Consider the two different ways to arrange a large sheet of atoms}
+
+    i)How many sulfur atoms(atomic radius $.180 \si{\nano\metre}$) can you fit on a square area $2.5 \si{\micro\metre} * 2.5 \si{\micro\metre}$ in arrangement(a)?
+
+    ii)How many sulfur atoms(atomic radius $.180 \si{\nano\metre}$) can you fit on a square area $2.5 \si{\micro\metre} * 2.5 \si{\micro\metre}$ in arrangement(a)?
+
+    iii)Which of these two layers is denser? By what factor?
+
     \pagebreak
     %----------------------------------------------
 
     %----------------------------------------------
     % Question 3 Exam 1
-    %
-    $$\text{Exam 1 Part 1}$$
-    Question 3
-    \pagebreak
+    \begin{center}
+        \textbf{Exam 1 Part 1}\\
+        \textit{Atoms}
+    \end{center}
+    \textbf{3. Consider the modern model of an atom}
 
+    a) Draw a diagram of the structure of the atom. Indicate what type of particles exist in each region of the atom.
+
+    b)Describe the properties of each of the three particles in the atom.
+
+    c) What is the approximate diameter of an atom?
+    \pagebreak
     %----------------------------------------------
 
     %----------------------------------------------
     % Question 4 Exam 1
     %
-    $$\text{Exam 1}$$
-    Question 4 Exam 1
+    \begin{center}
+        \textbf{Exam 1 Part 2}\\
+        \textit{Acid/Base}
+    \end{center}
+    \textbf{4. Consider the following questions about acids and bases.}
+
+    a) Note for each compound if it is\\
+    \begin{enumerate}
+        \item an acid or a base
+        \item weak or strong
+    \end{enumerate}
+
+    \ce{NH_{3}} \qquad \ce{HCl}
+
+    \ce{KI} \qquad \ce{Ca(OH)_{2}}
+
+    b) Predict the product of the following reaction. Make sure the reaction is balanced.
+
+    c) Write a net ionic equation for b).
+
+    d) Identify the acid and the base in the following reaction(remember the Bronsted Lowry definition)
+    $$\ce{CH_{3}COOH} + \ce{NH_{3}} \rightarrow \ce{CH_{3}COO^{-}} + \ce{NH_{4}^{+}}$$
     \pagebreak
 
     %----------------------------------------------
@@ -79,40 +121,89 @@
     %----------------------------------------------
     % Question 5 Exam 1
     %
-    $$\text{Exam 1}$$
-    Question 5 Exam 1
+    \begin{center}
+        \textbf{Exam 1 Part 2}\\
+        \textit{Reduction/Oxidation}
+    \end{center}
+    \textbf{5. In the following reactions}
+    \begin{enumerate}
+        \item Identify the oxidation state of the elements involved
+        \item Indicate what element is being oxidized and what is being reduced
+        \item Indicate how many electrons were transferred in the reaction
+    \end{enumerate}
+
+    a) $\ce{2 C_{2}H_{2}} + \ce{3 O_{2}} \rightarrow \ce{2CO_{2}} + \ce{2 H_{2}O}$
+
+    b) $\ce{Cu^{2+}} + \ce{Zn} \rightarrow  \ce{Zn^{2+}} + \ce{Cu}$
+
+    c) $\ce{P_{4}} + \ce{10 HClO} + \ce{6 H_{2}O} \rightarrow \ce{4 H_{3}PO_{4}} + \ce{10 HCl}$
     \pagebreak
     %----------------------------------------------
 
     %----------------------------------------------
     % Question 6 Exam 1
     %
-    $$\text{Exam 1}$$
-    Question 6 Exam 1
+    \begin{center}
+        \textbf{Exam 1 Part 2}\\
+        \textit{Galvanic Series}
+    \end{center}
+    \textbf{6. You are handed three metal samples. You are told that the three samples are silver, cobalt, and manganese, but that it isn't known which is which. You have available to you some zinc nitrate solution, nickel nitrate solution, and concentrated hydrochloric acid}
+
+    Describe in detail, with specifics, how you could use the chemicals available to identify the three metal samples. Feel free to make use of the galvanic series below.
+
     \pagebreak
     %----------------------------------------------
 
     %----------------------------------------------
     % Question 7 Exam 1
     %
-    $$\text{Exam 1}$$
-    Question 7 Exam 1
+    \begin{center}
+        \textbf{Exam 1 Part 3}\\
+        \textit{Stoichiometry w/ limiting reagent}
+    \end{center}
+    \textbf{7. One process used in gold mines to recover gold from mined rock is as shown below}
+    $$  \ce{Au} +  \ce{NaCN} +   \ce{O_{2}} +  \ce{H_{2}O} \rightarrow  \ce{NaAu(CN)_{2}} +  \ce{NaOH}$$
+
+    a) Balance the reaction
+
+    b) A small test batch is run in $10 \si{\milli\liter}$($10 \si{\milli\liter}$ is $10 \si{\gram}$ of water). The sample in the reaction contains $0.0178 \si{\gram}$ of gold. It is treated with $0.0115 \si{\gram}$ of $\ce{NaCN}$. $\ce{O_{2}}$ is present in excess. What is the limiting reagent in this test reaction?
+
+    c) What mass of $\ce{NaAu(CN)_{2}}$ would be produced by the reaction described by b?
+
     \pagebreak
     %----------------------------------------------
 
     %----------------------------------------------
     % Question 8 Exam 1
     %
-    $$\text{Exam 1}$$
-    Question 8 Exam 1
+    \begin{center}
+        \textbf{Exam 1 Part 3}\\
+        \textit{Stoichiometry With Story}
+    \end{center}
+    \textbf{8. Back in the day, aluminum was a highly precious metal. It was first isolated in the early 1800s. It's synthesis involved the reaction of aluminum chloride with potassium}
+    $$ \ce{3K} + \ce{AlCl_{3}} \rightarrow \ce{Al} + \ce{3KCl}$$
+
+    The Baron Von Markov has decided that he wants a full aluminum place setting, and you have been pout in charge of making the required aluminum. You have to produce $520 \si{\gram}$ of aluminum using the reaction shown above, which work in $87\%$ yield. How much aluminum chloride($\ce{AlCl_{3}}$) and potassium($\ce{K}$) will you need to be able to produce the needed amount of aluminum?
+
     \pagebreak
     %----------------------------------------------
 
     %----------------------------------------------
     % Question 9 Exam 1
     %
-    $$\text{Exam 1}$$
-    Question 9 Exam 1
+    \begin{center}
+        \textbf{Exam 1 Part 3}\\
+        \textit{Stoichiometry With Solutions Chemistry}
+    \end{center}
+    \textbf{9. Early lighter than air balloons often used hydrogen gas for lift. This hydrogen gas was generally produced from the reaction of iron and sulfuric acid as shown here:}
+    $$\ce{Fe} + \ce{H_{2}SO_{4}} \rightarrow \ce{FeSO_{4}} + \ce{H_{2}}$$
+
+    a) Is this reaction an acid base reaction or an oxidation reduction reaction( or neither ?). Justify your answer.
+
+    b) In a test reaction, reacting $100 \si{\gram}$ of iron with excess sulfuric acid produced $1.45 \si{\mole}$ of hydrogen gas. What is the percent yield of this reaction?
+
+    c) A balloon with the volume of $100 \si{\liter}$ needs to be filled with hydrogen. How much iron and sulfuric acid will be needed to produce the required amount of hydrogen gas to fill the $100 \si{\liter}$ balloon? To help, 1 $\si{\mole}$ of gas fills $24 \si{\liter}$ of volume. \textbf{Make sure to account for the yield calculated in b!}
+
     \pagebreak
     %----------------------------------------------
 
