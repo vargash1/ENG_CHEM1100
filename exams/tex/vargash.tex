@@ -2,7 +2,7 @@
 % @Date:   Saturday, June 25th 2016, 12:52:10 am
 % @Email:  vargash1@wit.edu
 % @Last modified by:   vargash1
-% @Last modified time: Tuesday, June 28th 2016, 5:42:12 am
+% @Last modified time: Tuesday, June 28th 2016, 10:11:21 am
 \documentclass{article}
 % Package that has high graphics rending capability
 \usepackage{pgf}
@@ -393,9 +393,17 @@
     How many kilograms of minerals and how many kilograms of carbon do you need to make 10 zerglings?
 
     \textbf{Solution}
-    $$ $$
 
-
+    Before we begin, it should already be quite evident that Unobtanium is our limiting reagent as carbon is readily available.
+    $$ \ce{2UbO3} + \ce{3C} \rightarrow \ce{2Ub} + \ce{3CO2}$$
+    $$ \text{Molar Mass(\ce{UbO3})} = 606 \si[per-mode=symbol]{\gram\per\mole} \quad \text{Molar Mass(\ce{Ub})} = 558 \si[per-mode=symbol]{\gram\per\mole}  $$
+    $$2000 \si{\kilo\gram} \, \ce{Ub} \text{ Required for 10 eggs} $$
+    $$\text{Moles of \ce{Ub} required} = \dfrac{2000 \si{\kilo\gram}}{558 \si[per-mode=symbol]{\gram\per\mole}} = 3584.23 \si{\mole}$$
+    This is under $100\%$ yield conditions however, we must correct this.
+    $$\dfrac{3584.23}{x} = .85 \rightarrow x = 4216.74 \si{\mole} \text{ Actual Yield}$$
+    $$\text{Mass(\ce{UbO3})} = (4216.74 \si{\mol}) * 606 \si[per-mode=symbol]{\gram\per\mole} = 2555344.44 \si{\gram} $$
+    Since we know reactant is a $2:3$ ratio.
+    $$\text{Mass(\ce{C})} = 2555344.44 \si{\gram} * \dfrac{3}{2} = 3833016.66 \si{\gram}$$
     \pagebreak
     %----------------------------------------------
 
@@ -424,11 +432,21 @@
         \textbf{Exam 2 Part 1}\\
         \textit{Red/Ox}
     \end{center}
-    \textbf{3. Jewelers have numerous tests to be able to tell whether a piece of jewelry is fake. For instance, lead is often used in making fake gold items. A jeweler is handed a gold ring, but is suspicious as to whether it is gold or not. HE uses a tool to make a tiny scratch on the surface of the ring, and drips some concentrated hydrochloric acid($\ce{H^{+}}$) on it. He then observes that bubbles are formed in the acid solution. Use the table below to explain the chemistry that was observed if the ring was made of lead.}
+    \textbf{3. Jewelers have numerous tests to be able to tell whether a piece of jewelry is fake. For instance, lead is often used in making fake gold items. A jeweler is handed a gold ring, but is suspicious as to whether it is gold or not. He uses a tool to make a tiny scratch on the surface of the ring, and drips some concentrated hydrochloric acid($\ce{H^{+}}$) on it. He then observes that bubbles are formed in the acid solution. Use the table below to explain the chemistry that was observed if the ring was made of lead.}
+    \begin{center}
+        \includegraphics[scale=0.35]{table_4_5}\\[1cm]
+    \end{center}
 
-    Although gold is not damaged by hydrochloric acid, it can be corroded by aqua regia, a mixture of nitric acid and hydrochloric acid. Below is the reaction between gold and aqua regia. Confirm that it is a red/ox reaction. Identify what element is oxidized and what is reduced. Indicate how many electrons are transferred.
-    $$\ce{Au} + \ce{HNO_{3}} + \ce{4 HCl} \rightarrow \ce{HAuCl_{4}} + \ce{2 H_{2}O} + \ce{NO}$$
+    \textbf{Solution to a}
 
+    According to the galvanic series in the table, lead will react with the hydrochloric acid. Gold, Silver, Platinum, and Gold will not! Thus if bubbles form, then the piece of metal he is holding is not precious. Please call the police.
+
+    \textbf{Although gold is not damaged by hydrochloric acid, it can be corroded by aqua regia, a mixture of nitric acid and hydrochloric acid. Below is the reaction between gold and aqua regia. Confirm that it is a red/ox reaction. Identify what element is oxidized and what is reduced. Indicate how many electrons are transferred.}
+    $$\ce{Au}(s) + \ce{HNO_{3}}(aq) + \ce{4 HCl}(aq) \rightarrow \ce{HAuCl_{4}}(aq) + \ce{2 H2O}(l) + \ce{NO}(g)$$
+
+    \textbf{Solution to b}
+    $$\ce{Au}(s) + \ce{H^{+1}NO_{3}^{-1}}(aq) + \ce{4 H^{+1}Cl^{-1}}(aq) \rightarrow \ce{H^{+1}Au^{+3}Cl_{4}^{-1}}(aq) + \ce{2 H2O}(l) + \ce{NO}(g)$$
+    We can see that the gold is being oxidized and gaining 3 electrons. $\ce{NO3}$ is the element that is being reduced. There are the electrons that were transferred in the reaction.
     \pagebreak
     %----------------------------------------------
 
@@ -441,16 +459,20 @@
     \end{center}
     \textbf{4. The Imperial Star Destroyer, His Left Hand, has departed space dock and is cruising around Tatooine. It spots the Rebel Frigatte, Valorous, and opens fire. His Left Hand's turbo laser batteries fires lasers with photons of wavelength $551 \si{\nano\meter}$.}
 
-    a) If \textit{Valorous} is hit by a $10 \si{\mega\joule}$ blast of energy from the laster fire, how many photons hit the Valorous?
+    \textbf{a) If \textit{Valorous} is hit by a $10 \si{\mega\joule}$ blast of energy from the laster fire, how many photons hit the Valorous?}
 
     $$ h = 6.626 * 10^{-34} \si{\joule} \cdot \si{\second}$$
     $$ c = 3.00 * 10^{8} \frac{\si{\meter}}{\si{\second}} $$
 
-    \textbf{Answer}\\
+    \textbf{Solution to a}
     $$ E_{\text{photon}} = \dfrac{hc}{5.51 * 10^{-7} \si{\meter}} = 3.8900196 * 10^{-19} \si{\joule} $$
+    $$ \text{Number of Photons} = \dfrac{10\si{\mega\joule}}{3.8900196 * 10^{-19} \si{\joule}} = 2.5707 * 10^{25}$$\\[1cm]
 
-    b) \textit{His Left Hand} is using a copper based laser emitter. What is happening inside the copper atoms to emit photons?
+    \textbf{b) \textit{His Left Hand} is using a copper based laser emitter. What is happening inside the copper atoms to emit photons?}
 
+    \textbf{Solution to b}
+
+    Electrons that are excited will move to a higher energy level, when they drop back down to their ground state. Photons are emitted. This is known as an elements light emission spectrum.
     \pagebreak
     %----------------------------------------------
 
@@ -466,16 +488,23 @@
     a) Write the electron configurations of the following elements:
     \begin{enumerate}
         \item S\\
-        \textbf{Answer: }
+        \textbf{Solution: }
         $[\ce{Ne}]3s^{2}3p^{4}$
         \item N\\
-        \textbf{Answer: }
+        \textbf{Solution: }
         $[\ce{He}]2s^{2}2p^{3}$
     \end{enumerate}
 
     b) Draw an energy diagram for the electron configuration of oxygen (with lines for each orbital and electrons as arrows). What ion is the most likely ion that oxygen will form? Explain based on your electron configuration.
+    \textbf{Solution to b: }\\[3cm]
+
 
     c) Using quantum numbers, explain why the $n = 2$ shell has an $s$ and $p$ sub shell but no $d$ or $f$ sub shells.
+
+    \textbf{Solution to c: }
+
+    It wouldn't be able to fit them. At the $n = 2$ shell, sub shells $1s$, $2s$, and $2p$ can exist. Technically at $n = 2$, 4 orbitals can exist. The $1s$ and $2s$ sub shell each have one orbital and then 2 more orbitals are in the $2p$ sub shell. It's worth mentioning that both the $1s$ and $2s$ shell can each hold 2 electrons. The $2p$ shell can hold 6 however.
+
     \pagebreak
     %----------------------------------------------
 
@@ -488,17 +517,19 @@
     \end{center}
     \textbf{6. Consider the following questions relating to electron configurations of atoms.}
 
-    a)Draw a digram, showing the probability of finding the electron on the $y$ axis, and distance from the nucleus on the $x$ axis for a $2s$ orbital
+    a)Draw a digram, showing the probability of finding the electron on the $y$ axis, and distance from the nucleus on the $x$ axis for a $2s$ orbital\\[2cm]
 
-    b)Draw a diagram, showing the probability of finding the electron on the $y$ axis, and distance from the nucleus on the $x$ axis for a $2p$ orbital.
+    b)Draw a diagram, showing the probability of finding the electron on the $y$ axis, and distance from the nucleus on the $x$ axis for a $2p$ orbital.\\[2cm]
 
-    c)Draw a picture of a $2p$ orbital
+    c)Draw a picture of a $2p$ orbital\\[2cm]
 
     d)In your diagrams and pictures above. Indicate the locations of any nodes. How many nodes does each type of orbital have?
 
+    Each type of orbital has one node.\\[2cm]
+
     e)What appears to be a common theme between $2s$ and $2p$ orbitals based on your answers in d?
 
-
+    Same amount of nodes, node closer to nucleus.
     \pagebreak
     %----------------------------------------------
 
@@ -511,15 +542,21 @@
     \end{center}
     \textbf{7. Consider the following questions relating to atomic size and lattice energy.}
 
-    a) Put the following sets of atoms in order of increasing size and \textbf{explain} your choice for ordering
+    \textbf{a) Put the following sets of atoms in order of increasing size and \textit{explain} your choice for ordering}
     $$\ce{O}, \ce{N}, \ce{F}, \ce{C}$$
 
-    b) There are two components to changes in lattice energies. The values below are an example of each. What is suggested by each trend? What changes appear to have the greater influence on lattice energy? Explain in detail.
+    \textbf{Solution to a}
+
+    A trend regarding atomic size is observable from the periodic table. As we go the right of the table, atoms get smaller. As we go to the bottom, atoms get bigger. Thus in order from smallest to largest, $\ce{F}$, $\ce{O}$, $\ce{N}$, $\ce{C}$.
+    One such explanation to this is the electron count that these elements have. In the same order, electron count goes from largest to smallest. More electrons result in a greater pull towards the nucleus, which leads to the pattern in size.\\[1cm]
+
+    \textbf{b) There are two components to changes in lattice energies. The values below are an example of each. What is suggested by each trend? What changes appear to have the greater influence on lattice energy? Explain in detail.}
     \begin{enumerate}
         \item $\ce{LiF}$ $1060 \dfrac{\si{\kilo\joule}}{\si{\mole}} \qquad$ $\ce{CsI}$  $600 \dfrac{\si{\kilo\joule}}{\si{\mole}}$
         \item  $\ce{LiF}$ $1060 \dfrac{\si{\kilo\joule}}{\si{\mole}} \qquad$ $\ce{MgO}$  $3900 \dfrac{\si{\kilo\joule}}{\si{\mole}}$
     \end{enumerate}
-    \textbf{Answer}\\
+
+    \textbf{Solution to b}
 
     1. $\ce{LiF}$ has a greater lattice energy due to the size difference. The increased atomic radii of $\ce{Cs}$ and $\ce{I}$ results in less lattice energy. Lithium and Fluorine are smaller relative to Cesium and Iodine, resulting in a tighter pull from the nucleus to the electrons. Thus, $\ce{LiF}_{\text{Lattice Energy}} > \ce{CsI}_{\text{Lattice Energy}}$
 
@@ -535,7 +572,7 @@
         \textit{Bond Enthalpy}
     \end{center}
     \textbf{8. Currently the vast majority of commercially used hydrogen is generated according to the following reaction.}
-    $$\ce{CH4} + \ce{H2O} \rightarrow \ce{CO2} + \ce{H2}$$
+    $$\ce{CH4} + \ce{2H2O} \rightarrow \ce{CO2} + \ce{4H2}$$
     \begin{center}
         $\ce{C-H}$ $413 \frac{\si{\kilo\joule}}{\si{\mol}} \quad$
         $\ce{C-O}$ $358 \frac{\si{\kilo\joule}}{\si{\mol}} \quad$
@@ -549,10 +586,23 @@
 
     a) What is the enthalpy change($\Delta H$) for this reaction per $\ce{CO2}$? Is energy released or absorbed?
 
+    \textbf{Solution to a}
+    $$ \Delta = (4(413) + 2(2(463))) - (2(799) + 4(436)) = 162 \si[per-mode=symbol]{\kilo\joule\per\mole}$$
+    Energy is absorbed
+
     b) There are a variety of means of recovering energy from $\ce{H2}$, either from giving heat through combustion or electricity electrochemically from a fuel cell. What is the energy released in this reaction?
-    $$\ce{H2} + \ce{O2} \rightarrow \ce{2H2O}$$
+    $$\ce{2H2} + \ce{O2} \rightarrow \ce{2H2O}$$
+
+    \textbf{Solution to b}
+
+    $$\Delta = (2(436) + (495)) - 2(2(463))  = -485 \si[per-mode=symbol]{\kilo\joule\per\mole}$$
 
     c) Combining a) and b), do some stoichiometry to find the net energy released per $\ce{CO2}$ produced.
+
+    \textbf{Solution to c}
+
+    Net energy released per $\ce{CO2}$, $\Delta = 799 * 2 = 1598 \si[per-mode=symbol]{\kilo\joule\per\mole}$
+
     \pagebreak
     %----------------------------------------------
 
@@ -567,17 +617,17 @@
 
     a) Order the following bonds from most to least polar. Show your calculations.
     \begin{enumerate}
-        \item $\ce{F-F}$ in $\ce{F2}$
-        \item $\ce{S=C}$ in $\ce{CS2}$
-        \item $\ce{O-H}$ in $\ce{H2O}$
-        \item $\ce{Cl-H}$ in $\ce{HCl}$
-        \item $\ce{B-F}$ in $\ce{BF3}$
-        \item $\ce{Na-Cl}$ in $\ce{NaCl}$
+        \item $\ce{Na-Cl}$ in $\ce{NaCl}$ $\quad \Delta EN = 2.1$ Ionic
+        \item $\ce{B-F}$ in $\ce{BF3}$ $\quad \Delta EN = 2.0$ Ionic
+        \item $\ce{O-H}$ in $\ce{H2O}$ $\quad \Delta EN = 1.4$ Polar covalent
+        \item $\ce{Cl-H}$ in $\ce{HCl}$ $\quad \Delta EN = 0.9$ Polar covalent
+        \item $\ce{F-F}$ in $\ce{F2}$ $\quad \Delta EN = 0$ Non polar covalent
+        \item $\ce{S=C}$ in $\ce{CS2}$ $\quad \Delta EN = 0$ Non polar covalent
     \end{enumerate}
 
-    b)  Categorize each of the bonds in a) as polar covalent, non polar covalent, or ionic.
-
     c) What does it mean for a bond to be polar? How is this different from a bond being ionic?
+
+    For a bond to be polar, the electrons that are shared within the molecule tend to sway more to one side than the other. This isn't the same as an ionic bond, where electrons quite literally transfer from one element to the other.
     \pagebreak
     %----------------------------------------------
 
@@ -589,6 +639,8 @@
     \end{center}
 
     A) Describe the phenomenon due to which the region of the atmosphere we call the sky is blue at noon on a sunny day. (aka Why is the sky blue?)
+
+    Blue light is the type of light most scattered by air. At dawn and dusk, the angle of the light from the sun causes more red to be scattered near the sun. Which is why we see reddish sunsets and sunrises.\\[1cm]
 
     B) Use Molecular Orbitals to explain whether or not $\ce{He2+}$ molecule should be able to exist.
 
