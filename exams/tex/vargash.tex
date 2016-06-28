@@ -1,34 +1,51 @@
-
 % @Author: Vargas Hector <vargash1>
 % @Date:   Saturday, June 25th 2016, 12:52:10 am
 % @Email:  vargash1@wit.edu
 % @Last modified by:   vargash1
-% @Last modified time: Sunday, June 26th 2016, 10:22:53 pm
+% @Last modified time: Tuesday, June 28th 2016, 5:39:06 am
 \documentclass{article}
-% Package that renders tables nicely
-\usepackage{longtable}
 % Package that has high graphics rending capability
 \usepackage{pgf}
 \usepackage{amsmath}
 \usepackage{amssymb}
+
+% Package that is used for units
+% Documentation: http://mirror.unl.edu/ctan/macros/latex/contrib/siunitx/siunitx.pdf
 \usepackage{siunitx}
+
+% Package used for importing images
 \usepackage{graphicx}
+
+% Package used for chemical equations
+% Documentation: www.ctan.org/tex-archive/macros/latex/contrib/mhchem/mhchem.pdf
 \usepackage[version=3]{mhchem}
+
+% Package used for controlling document margins
 \usepackage[margin=1.5in]{geometry}
+% Disable page numbering
 \pagenumbering{gobble}
+% Set relative file path (relative is recommended over  absolute) for image imports
 \graphicspath { {./images/} }
+% Comments are preceded by %
+% LaTeX justifies text by default
 \begin{document}
     %----------------------------------------------
     % Cover Page
     % A fancy cover page with centered text
     \thispagestyle{empty}
+    % \\ forces a newline
+    % \\[1cm]  forces a newline and skips 1cm
     \begin{center}
+        % All text in this block is centered
+        % Scale image down with .3 factor
+        % Note there is no need to include the file extension
         \includegraphics[scale=0.3]{wit_logo}\\[1cm]
-        Exam Writeup using  \LaTeX\\
+        Exam 1 Writeup using  \LaTeX\\
         Professor G.Sirokman\\
         Hector Vargas\\
         CHEM 1100-4B
     \end{center}
+    % Go to new page
     \pagebreak
     %----------------------------------------------
 
@@ -42,21 +59,34 @@
     %----------------------------------------------
     % Question 1 Exam 1
     \begin{center}
+        % Bold text
         \textbf{Exam 1 Part 1}\\
+        % Italic text
         \textit{Atomic Structure}
     \end{center}
-    \textbf{1. There are two naturally occurring types of chlorine, ${}^{35}$ Cl $(34.969 \si{\atomicmassunit})$ and ${}^{37}$ Cl $(36.966 \si{\atomicmassunit})$}
+    \textbf{1. There are two naturally occurring types of chlorine, $\ce{^{35}Cl}$ $(34.969 \si{\atomicmassunit})$ and $\ce{^{37}Cl}$ $(36.966 \si{\atomicmassunit})$}
 
-    a) Given that the atomic weight of chlorine is $63.546 \si{\atomicmassunit}$, what are the abundances of ${}^{35}$Cl and ${}^{37}$Cl?
+    \textbf{a) Given that the atomic weight of chlorine is $36.45 \si{\atomicmassunit}$, what are the abundances of $\ce{^{35}Cl}$ and $\ce{^{37}Cl}$ ?}
 
-    b) What makes ${}^{35}$Cl different from ${}^{37}$Cl?
+    %You can combine the two to give you italicized bold text
+    \textbf{\textit{Solution to a}}
+    $$36.45 = 34.969x + 36.966(1 - x)$$
+    $$\downarrow$$
+    $$x = .759 = 75.9 \%$$
 
-    Both of these isotopes of chlorine differ by the number of neutrons they both have. It's important to note that the number of protons must remain the same. A different number of protons results in a different element. The difference in neutrons is what contributes to the difference in weight.
+    Thus, $\ce{^{35}Cl}$ accounts for $75.9 \%$ of all chlorine. Whereas $\ce{^{37}Cl}$ accounts for $24.1 \%$ of all chlorine.\\[1cm]
 
-    c)Which chlorine is regular chlorine and which one is the isotope?
+    \textbf{b) What makes $\ce{^{35}Cl}$ different from $\ce{^{37}Cl}$?}
 
-    The term regular would be a bit incorrect. They are both regular chlorine, what makes them 'regular' is the fact that one of their isotopes is in higher abundance.
+    \textbf{\textit{Solution to b}}
 
+    Both of these isotopes of chlorine differ by the number of neutrons they both have. It's important to note that the number of protons must remain the same. A different number of protons results in a different element. The difference in neutrons is what contributes to the difference in weight.\\[1cm]
+
+    \textbf{c)Which chlorine is regular chlorine and which one is the isotope?}
+
+    \textbf{\textit{Solution to c}}
+
+    The term regular would be a bit inaccurate. They are both regular chlorine, what makes them 'regular' is the fact that one of their isotopes is in higher abundance. Thus $\ce{^{35}Cl}$ is the so called regular chlorine since it is more abundant.
     \pagebreak
     %----------------------------------------------
 
@@ -68,11 +98,11 @@
     \end{center}
     \textbf{2. Consider the two different ways to arrange a large sheet of atoms}
 
-    i)How many sulfur atoms(atomic radius $.180 \si{\nano\metre}$) can you fit on a square area $2.5 \si{\micro\metre} * 2.5 \si{\micro\metre}$ in arrangement(a)?
+    \textbf{i)How many sulfur atoms(atomic radius $.180 \si{\nano\metre}$) can you fit on a square area $2.5 \si{\micro\metre} * 2.5 \si{\micro\metre}$ in arrangement(a)?}
 
-    ii)How many sulfur atoms(atomic radius $.180 \si{\nano\metre}$) can you fit on a square area $2.5 \si{\micro\metre} * 2.5 \si{\micro\metre}$ in arrangement(a)?
+    \textbf{ii)How many sulfur atoms(atomic radius $.180 \si{\nano\metre}$) can you fit on a square area $2.5 \si{\micro\metre} * 2.5 \si{\micro\metre}$ in arrangement(a)?}
 
-    iii)Which of these two layers is denser? By what factor?
+    \textbf{iii)Which of these two layers is denser? By what factor?}
 
     \pagebreak
     %----------------------------------------------
@@ -85,11 +115,23 @@
     \end{center}
     \textbf{3. Consider the modern model of an atom}
 
-    a) Draw a diagram of the structure of the atom. Indicate what type of particles exist in each region of the atom.
+    \textbf{a) Draw a diagram of the structure of the atom. Indicate what type of particles exist in each region of the atom.}
 
-    b)Describe the properties of each of the three particles in the atom.
+    \textbf{\textit{Solution to a}}\\[3cm]
 
-    c) What is the approximate diameter of an atom?
+    \textbf{b)Describe the properties of each of the three particles in the atom.}
+
+    \textbf{\textit{Solution to b}}
+    \begin{enumerate}
+        \item Electrons: Negative charge, amount may be the same as number of Protons
+        \item Protons: Positive charge, weight of $1 \si{\atomicmassunit}$, define the element.
+        \item Neutrons: No charge, weight of $1 \si{\atomicmassunit}$, define the isotope of the element.\\[1cm]
+    \end{enumerate}
+
+    \textbf{c) What is the approximate diameter of an atom?}
+
+    \textbf{\textit{Solution to c}}
+    $$ 1 \si{\angstrom} = 1 * 10^{-10} \si{\meter} = .1 \si{\nano\meter} $$
     \pagebreak
     %----------------------------------------------
 
@@ -102,22 +144,40 @@
     \end{center}
     \textbf{4. Consider the following questions about acids and bases.}
 
-    a) Note for each compound if it is\\
+    \textbf{a) Note for each compound if it is an acid or base. weak or strong}
+
+    \textbf{\textit{Solution to a}}
     \begin{enumerate}
-        \item an acid or a base
-        \item weak or strong
+        \item $\ce{NH3}$ Weak Base.
+        \item $\ce{HCl}$ Strong Acid.
+        \item $\ce{KI}$ Neither an acid or base.
+        \item $\ce{Ca(OH)2}$ Strong Base.
     \end{enumerate}
 
-    \ce{NH_{3}} \qquad \ce{HCl}
+    \textbf{b) Predict the product of the following reaction. Make sure the reaction is balanced.}
+    $$\ce{2H3PO4} + \ce{Ca(OH)2} \rightarrow \emptyset + \emptyset$$
 
-    \ce{KI} \qquad \ce{Ca(OH)_{2}}
+    \textbf{\textit{Solution to b}}
+    We know that acid base reactions must result in a salt and water. Thus we already know that one of the products is water. Thus the reaction below is what we have so far, all we need now is the salt and balancing. Lets start with the first reactant, balancing tends to rely on even factors.
+    $$\ce{2H3PO4} + \ce{Ca(OH)2} \rightarrow \emptyset + \ce{H2O}$$
+    Now he have a total of 6 hydrogens, not to mention the 2 hydrogens and 2 oxygens from the 2nd reactant. Thus we know that we have $\ce{8H}$ and $\ce{2O}$. Since one of our products is water, every 2 hydrogen's must have an oxygen.
+    $$\ce{2H3PO4} + \ce{3Ca(OH)2} \rightarrow \emptyset + \ce{H2O}$$
+    Now we have a total of $\ce{12H}$ and $\ce{6O}$. For each 2 Hydrogens, we have an Oxygen. This gives us.
+    $$\ce{2H3PO4} + \ce{3Ca(OH)2} \rightarrow \emptyset + \ce{6H2O}$$
+    Now we can much more easily determine the salt.
+    $$\ce{2H3PO4}(aq) + \ce{3Ca(OH)2}(aq) \rightarrow \ce{Ca3(PO4)2}(s) + \ce{6H2O}(l)$$
 
-    b) Predict the product of the following reaction. Make sure the reaction is balanced.
+    \textbf{c) Write a net ionic equation for b).}
 
-    c) Write a net ionic equation for b).
+    \textbf{\textit{Solution to c}}
+    $$\ce{6H^{+}} (aq) + \ce{2PO4^{3-}} (aq) + \ce{3Ca^{2+}} (aq) + \ce{6OH^{-}} (aq) \rightarrow \ce{Ca3(PO4)2}(s) + \ce{6H2O}(l)$$
 
-    d) Identify the acid and the base in the following reaction(remember the Bronsted Lowry definition)
+    \textbf{d) Identify the acid and the base in the following reaction(remember the Bronsted Lowry definition)}
     $$\ce{CH_{3}COOH} + \ce{NH_{3}} \rightarrow \ce{CH_{3}COO^{-}} + \ce{NH_{4}^{+}}$$
+
+    \textbf{\textit{Solution to d}}
+    According the Bronsted Lowry definition, acids are proton($\ce{H+}$) donators, whereas bases are proton($\ce{H+}$) acceptors. Thus using this definition, we can see that in the above equation that $\ce{CH_{3}COOH}$ was the acid as it lost its hydrogen. This means that $\ce{NH_{3}}$ must be the base.
+
     \pagebreak
 
     %----------------------------------------------
@@ -133,14 +193,27 @@
     \begin{enumerate}
         \item Identify the oxidation state of the elements involved
         \item Indicate what element is being oxidized and what is being reduced
-        \item Indicate how many electrons were transferred in the reaction
+        \item Indicate how many electrons were transferred in the reaction\\[1cm]
     \end{enumerate}
 
-    a) $\ce{2 C_{2}H_{2}} + \ce{3 O_{2}} \rightarrow \ce{2CO_{2}} + \ce{2 H_{2}O}$
+    a) $ \ce{2 C_{2}H_{2}} + \ce{3 O_{2}} \rightarrow \ce{2CO_{2}} + \ce{2 H_{2}O}$
+
+    \textbf{\textit{Solution to a}}
+    $$ \ce{2 C_{2}^{-1}H_{2}^{1+}} + \ce{3 O_{2}^{0}} \rightarrow \ce{2C^{4+}O_{2}^{-2}} + \ce{2 H_{2}^{1+}O^{-2}} $$
+    Oxygen is being oxidized whereas carbon is being reduced. The amount of electrons transferred in this reaction is
+    10. Oxygen has a charge of 0 on the reactant side, but moves on  to have a two -2 charges on the product side. Whereas Carbon loses a total of 6 electrons in order to match the new charge of oxygen on the product side.\\[1cm]
 
     b) $\ce{Cu^{2+}} + \ce{Zn} \rightarrow  \ce{Zn^{2+}} + \ce{Cu}$
 
+    \textbf{\textit{Solution to b}}
+    $$ \ce{Cu^{2+}} + \ce{Zn^{0}} \rightarrow  \ce{Zn^{2+}} + \ce{Cu^{0}} $$
+    Copper is being reduced whereas Zinc is being oxidized. The total transfer of electrons is 4. 2 for oxidizing copper from a charge of $+2$ to $0$, and then 2 for reducing zinc from $0$ to $+2$.\\[1cm]
+
     c) $\ce{P_{4}} + \ce{10 HClO} + \ce{6 H_{2}O} \rightarrow \ce{4 H_{3}PO_{4}} + \ce{10 HCl}$
+
+    \textbf{\textit{Solution to c}}
+    $$\ce{P_{4}^{0}} + \ce{10 H^{+1}Cl^{+1}O^{-2}} + \ce{6 H_{2}^{+1}O^{-2}} \rightarrow \ce{4 H_{3}^{+1}PO_{4}^{-3}} + \ce{10 H^{+1}Cl^{-1}}$$
+     Phosphorus becomes part of a new compound that has a charge of $-3$, thus it becomes oxidized. Chlorine initially has a charge of $+1$ on the reactant side when it is part of $\ce{HClO}$, however it then becomes reduced in $\ce{HCl}$ by 2 electrons. Thus, the total amount of transferred electrons is 6 electrons.
     \pagebreak
     %----------------------------------------------
 
@@ -151,9 +224,15 @@
         \textbf{Exam 1 Part 2}\\
         \textit{Galvanic Series}
     \end{center}
-    \textbf{6. You are handed three metal samples. You are told that the three samples are silver, cobalt, and manganese, but that it isn't known which is which. You have available to you some zinc nitrate solution, nickel nitrate solution, and concentrated hydrochloric acid}
-
+    \textbf{6. You are handed three metal samples. You are told that the three samples are silver, cobalt, and manganese, but that it isn't known which is which. You have available to you some zinc nitrate solution($\ce{Zn(NO3)2}$), nickel nitrate($\ce{Ni(NO3)2}$) solution, and concentrated hydrochloric acid($\ce{HCl}$). Feel free to use the galvanic series below}
+    \begin{center}
+        \includegraphics[scale=0.5]{table_4_5}\\[1cm]
+    \end{center}
     Describe in detail, with specifics, how you could use the chemicals available to identify the three metal samples. Feel free to make use of the galvanic series below.
+
+    \textbf{\textit{Solution}}
+
+    $\ce{Zn(NO3)2}$ will react with manganese only, you can use this information to identify the manganese sample. $\ce{Ni(NO3)2}$ will react with cobalt and manganese, but since you have identified manganese already, then the solution will react with cobalt only. Thus you have identified 2 of 3 metals. $\ce{HCl}$ will react with all metals except silver, but by process of elimination, you already know silver is the metal that hasn't been identified yet.
 
     \pagebreak
     %----------------------------------------------
@@ -168,11 +247,30 @@
     \textbf{7. One process used in gold mines to recover gold from mined rock is as shown below}
     $$  \ce{Au} +  \ce{NaCN} +   \ce{O_{2}} +  \ce{H_{2}O} \rightarrow  \ce{NaAu(CN)_{2}} +  \ce{NaOH}$$
 
-    a) Balance the reaction
+    \textbf{a) Balance the reaction}
 
-    b) A small test batch is run in $10 \si{\milli\liter}$($10 \si{\milli\liter}$ is $10 \si{\gram}$ of water). The sample in the reaction contains $0.0178 \si{\gram}$ of gold. It is treated with $0.0115 \si{\gram}$ of $\ce{NaCN}$. $\ce{O_{2}}$ is present in excess. What is the limiting reagent in this test reaction?
+    \textbf{\textit{Solution to a}}
+    $$  \ce{Au} +  \ce{NaCN} +   \ce{O_{2}} +  \ce{2H_{2}O} \rightarrow  \ce{NaAu(CN)_{2}} +  \ce{4NaOH}$$
+    $$\downarrow $$
+    $$  \ce{Au} +  \ce{8NaCN} +   \ce{O_{2}} +  \ce{2H_{2}O} \rightarrow  \ce{4NaAu(CN)_{2}} +  \ce{4NaOH}$$
+    $$\downarrow $$
+    $$  \ce{4Au} +  \ce{8NaCN} +   \ce{O_{2}} +  \ce{2H_{2}O} \rightarrow  \ce{4NaAu(CN)_{2}} +  \ce{4NaOH}$$\\[1cm]
 
-    c) What mass of $\ce{NaAu(CN)_{2}}$ would be produced by the reaction described by b?
+    \textbf{b) A small test batch is run in $10 \si{\milli\liter}$($10 \si{\milli\liter}$ is $10 \si{\gram}$ of water). The sample in the reaction contains $0.0178 \si{\gram}$ of gold. It is treated with $0.0115 \si{\gram}$ of $\ce{NaCN}$. $\ce{O_{2}}$ is present in excess. What is the limiting reagent in this test reaction?}
+
+    \textbf{\textit{Solution to b}}
+    $$\text{Moles of \ce{Au}} = \dfrac{.0178 \si{\gram}}{197 \si[per-mode=symbol]{\gram\per\mol}} = 9.035 * 10^{-5} \si{\mole}$$
+    $$ \text{Moles of \ce{NaCN}} = \dfrac{.0115 \si{\gram}}{49 \si[per-mode=symbol]{\gram\per\mol}} = 2.346 * 10^{-4} \si{\mole}$$
+    $$ \text{Moles of \ce{H2O}} = \dfrac{10 \si{\gram}}{18 \si[per-mode=symbol]{\gram\per\mol}} = 0.555 \si{\mole}$$
+    Our limiting reactant is gold as expected.\\[1cm]
+
+    \textbf{c) What mass of $\ce{NaAu(CN)_{2}}$ would be produced by the    reaction described by b?}
+
+    \textbf{\textit{Solution to c}}
+
+    Since we know gold is our limiting reactant and the reaction is $\ce{4 Au}$ : $\ce{4NaAu(CN)2}$.
+
+    $$ \text{Grams of \ce{NaAu(CN)2}} = 9.035 * 10^{-5} \si{\mole} * 272 \si[per-mode=symbol]{\gram\per\mol} = .0245  \si{\gram}$$
 
     \pagebreak
     %----------------------------------------------
@@ -185,9 +283,18 @@
         \textit{Stoichiometry With Story}
     \end{center}
     \textbf{8. Back in the day, aluminum was a highly precious metal. It was first isolated in the early 1800s. It's synthesis involved the reaction of aluminum chloride with potassium}
-    $$ \ce{3K} + \ce{AlCl_{3}} \rightarrow \ce{Al} + \ce{3KCl}$$
+    $$ \ce{3K} + \ce{AlCl3} \rightarrow \ce{Al} + \ce{3KCl}$$
 
     The Baron Von Markov has decided that he wants a full aluminum place setting, and you have been pout in charge of making the required aluminum. You have to produce $520 \si{\gram}$ of aluminum using the reaction shown above, which work in $87\%$ yield. How much aluminum chloride($\ce{AlCl_{3}}$) and potassium($\ce{K}$) will you need to be able to produce the needed amount of aluminum?
+
+    \textbf{\textit{Solution}}
+    $$ \text{Moles of \ce{Al}} = \dfrac{520 \si{\gram}}{27 \si[per-mode=symbol]{\gram\per\mol}} = 19.26 \si{\mole}$$
+    $$\downarrow$$
+    $$ \text{Moles of \ce{K}} = 19.26 \si{\mole} * 3 = 57.78 \si{\mole} $$
+    $$ \text{Moles of \ce{AlCl3}} = 19.26 \si{\mole} * 1 = 19.26 \si{\mole} $$
+    $$\downarrow$$
+    $$ \text{Mass of \ce{K}} = 57.78 \si{\mole} * 39 \si[per-mode=symbol]{\gram\per\mol} = 2252.25 \si{\gram}$$
+    $$ \text{Mass of \ce{AlCl3}} = 19.26 \si{\mole} * 132 \si[per-mode=symbol]{\gram\per\mol} = 2542.32 \si{\gram} $$
 
     \pagebreak
     %----------------------------------------------
@@ -202,11 +309,28 @@
     \textbf{9. Early lighter than air balloons often used hydrogen gas for lift. This hydrogen gas was generally produced from the reaction of iron and sulfuric acid as shown here:}
     $$\ce{Fe} + \ce{H_{2}SO_{4}} \rightarrow \ce{FeSO_{4}} + \ce{H_{2}}$$
 
-    a) Is this reaction an acid base reaction or an oxidation reduction reaction(or neither?). Justify your answer.
+    \textbf{a) Is this reaction an acid base reaction or an oxidation reduction reaction(or neither?). Justify your answer.}
 
-    b) In a test reaction, reacting $100 \si{\gram}$ of iron with excess sulfuric acid produced $1.45 \si{\mole}$ of hydrogen gas. What is the percent yield of this reaction?
+    \textbf{\textit{Solution to a}}
 
-    c) A balloon with the volume of $100 \si{\liter}$ needs to be filled with hydrogen. How much iron and sulfuric acid will be needed to produce the required amount of hydrogen gas to fill the $100 \si{\liter}$ balloon? To help, 1 $\si{\mole}$ of gas fills $24 \si{\liter}$ of volume. \textbf{Make sure to account for the yield calculated in b!}
+    This reaction is a redox reaction, Fe has a charge of 0 on the reactant side, yet has a charge of $2+$ of the product side.\\[1cm]
+
+    \textbf{b) In a test reaction, reacting $100 \si{\gram}$ of iron with excess sulfuric acid produced $1.45 \si{\mole}$ of hydrogen gas. What is the percent yield of this reaction?}
+
+    \textbf{\textit{Solution to b}}
+    $$\text{Moles of \ce{Fe}} = \dfrac{100 \si{\gram}}{ 56 \si[per-mode=symbol]{\gram\per\mol}} = 1.785 \si{\mole}$$
+    $$\text{Theoretical \ce{H} Yield} = 1.785 * 2 \si[per-mode=symbol]{\gram\per\mol} = 3.571 \si{\gram}  = 1.785 \si{\mole} \text{ of Hydrogen}$$
+    $$\text{Percent Yield} = \dfrac{\text{Actual}}{\text{Theoretical}} = \dfrac{1.45}{1.785} * 100\% = 81.23 \%$$\\[1cm]
+
+    \textbf{c) A balloon with the volume of $100 \si{\liter}$ needs to be filled with hydrogen. How much iron and sulfuric acid will be needed to produce the required amount of hydrogen gas to fill the $100 \si{\liter}$ balloon? To help, 1 $\si{\mole}$ of gas fills $24 \si{\liter}$ of volume. \textbf{Make sure to account for the yield calculated in b!}}
+
+    \textbf{\textit{Solution to c}}
+    $$\dfrac{100 \si{\liter}}{24 \si{\liter}} = 4.16 \si{\mole} \text{ of gas needed} $$
+    Accounting for yield
+    $$\text{Actual} = \dfrac{4.16}{x} = .83 = 5.012 \si{\mole} $$
+    $$\text{Moles of \ce{Fe} and \ce{H2SO4} needed} = 5.012 \si{\mole} $$
+    $$\text{Mass of \ce{Fe} needed} =  5.012 \si{\mole} * 56 \si[per-mode=symbol]{\gram\per\mol} = 280.67 \si{\gram}$$
+    $$\text{Mass of \ce{H2SO4} needed} =  5.012 \si{\mole} *   98 \si[per-mode=symbol]{\gram\per\mol} = 491.17 \si{\gram}$$
 
     \pagebreak
     %----------------------------------------------
@@ -218,12 +342,17 @@
         \textbf{Exam 1 Bonus}\\
     \end{center}
 
-    A) Describe the phenomenon due to which the region of the atmosphere we call the sky is blue at noon on a sunny day. (aka Why is the sky blue?)
+    \textbf{A) Describe the phenomenon due to which the region of the atmosphere we call the sky is blue at noon on a sunny day. (aka Why is the sky blue?)}
 
-    B) We have talked about two ways to categorize compounds so far, molecules, and ionic compounds. How are these two types of compounds different from each other? How does difference influence the way they behave in solution?
+    \textbf{Solution}
 
-    \textbf{Answer}\\
-    These two different types of compounds primarily differ in the method in which they bond. Ionic compounds transfer electrons, whereas molecules share electrons.
+    Blue light is the type of light most scattered by air. At dawn and dusk, the angle of the light from the sun causes more red to be scattered near the sun. Which is why we see reddish sunsets and sunrises.\\[1cm]
+
+    \textbf{B) We have talked about two ways to categorize compounds so far, molecules, and ionic compounds. How are these two types of compounds different from each other? How does difference influence the way they behave in solution?}
+
+    \textbf{Solution}
+
+    These two different types of compounds primarily differ in the method in which they bond. Ionic compounds transfer electrons, whereas molecules share electrons. Ionic compounds will require transfer of electrons to react in a solution, whereas compounds will require you to break their bonds.
 
     \pagebreak
     %----------------------------------------------
@@ -651,5 +780,4 @@
     B) The synthesis of biodiesel takes advantage of Le Chatelier's principle in two ways. Describe Le Chatelier's principle and how it helps generate higher purity biodiesel in the lab.
 
     %----------------------------------------------
-
 \end{document}
